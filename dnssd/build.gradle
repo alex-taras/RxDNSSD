@@ -5,11 +5,13 @@ repositories {
 }
 
 android {
-    compileSdkVersion 30
+    namespace = "com.github.druk.dnssd"
+
+    compileSdkVersion 35
 
     defaultConfig {
-        minSdkVersion 14
-        targetSdkVersion 30
+        minSdkVersion 28
+        targetSdkVersion 35
     }
 
     buildTypes {
@@ -34,7 +36,7 @@ android {
         }
     }
 
-    ndkVersion "23.1.7779620"
+    ndkVersion "28.1.13356709"
 }
 
 dependencies {

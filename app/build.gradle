@@ -1,12 +1,14 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 31
+    namespace = "com.github.druk.dnssdsamples"
+
+    compileSdkVersion 35
 
     defaultConfig {
         applicationId "com.github.druk.rxdnssd"
-        minSdkVersion 16
-        targetSdkVersion 31
+        minSdkVersion 28
+        targetSdkVersion 35
         versionCode 1
         versionName "1.0"
     }
@@ -26,15 +28,15 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 
-    ndkVersion "23.1.7779620"
+    ndkVersion "28.1.13356709"
 }
 
 dependencies {
     implementation project(':rx2dnssd')
 
-    implementation 'androidx.appcompat:appcompat:1.4.0'
-    implementation 'com.google.android.material:material:1.4.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.2'
+    implementation 'androidx.appcompat:appcompat:1.7.1'
+    implementation 'com.google.android.material:material:1.13.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.2.1'
 
     testImplementation 'junit:junit:4.13.2'
 }

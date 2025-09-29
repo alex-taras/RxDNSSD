@@ -39,13 +39,13 @@ public class ServiceAdapter extends RecyclerView.Adapter<ServiceAdapter.ViewHold
 
     public ServiceAdapter(Context context) {
         TypedValue mTypedValue = new TypedValue();
-        context.getTheme().resolveAttribute(R.attr.selectableItemBackground, mTypedValue, true);
+        context.getTheme().resolveAttribute(android.R.attr.selectableItemBackground, mTypedValue, true);
     }
 
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        return new ViewHolder(LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.two_text_item, viewGroup, false));
+        return new ViewHolder(LayoutInflater.from(viewGroup.getContext()).inflate(android.R.layout.two_line_list_item, viewGroup, false));
     }
 
     @SuppressLint("SetTextI18n")
@@ -61,7 +61,7 @@ public class ServiceAdapter extends RecyclerView.Adapter<ServiceAdapter.ViewHold
             holder.text2.setText("Address: " + bs.getInet6Address().toString() + ":" + bs.getPort());
         }
         else {
-            holder.text2.setText(R.string.unresolved);
+            holder.text2.setText(android.R.string.unknownName);
         }
         holder.text3.setText("Interface: " + bs.getIfIndex());
     }
@@ -108,9 +108,8 @@ public class ServiceAdapter extends RecyclerView.Adapter<ServiceAdapter.ViewHold
 
         public ViewHolder(View itemView) {
             super(itemView);
-            text1 = itemView.findViewById(R.id.text1);
-            text2 = itemView.findViewById(R.id.text2);
-            text3 = itemView.findViewById(R.id.text3);
+            text1 = itemView.findViewById(android.R.id.text1);
+            text2 = itemView.findViewById(android.R.id.text2);
         }
     }
 }

@@ -1,11 +1,13 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 30
+    namespace = "com.github.druk.rxdnssd"
+
+    compileSdkVersion 35
 
     defaultConfig {
-        minSdkVersion 14
-        targetSdkVersion 30
+        minSdkVersion 28
+        targetSdkVersion 35
     }
 
     buildTypes {
